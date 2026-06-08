@@ -4,7 +4,6 @@
  */
 package uef.edu.vn.beautysalonfuwa.config;
 
-
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
@@ -14,10 +13,15 @@ import java.sql.Connection;
  * @author PC
  */
 public class DatabaseConnection {
-    private static final String URL =
-            "jdbc:mysql://localhost:3306/beauty_salon_fuwa?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Ho_Chi_Minh";
-    private static final String USER = "root";
-    private static final String PASSWORD = "annguyen123";
+    // Đã cập nhật URL trỏ đến máy chủ Clever Cloud, hỗ trợ Unicode tiếng Việt đầy đủ
+    private static final String URL = 
+            "jdbc:mysql://bxkkgkkrodircby3ad1m-mysql.services.clever-cloud.com:3306/bxkkgkkrodircby3ad1m?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Ho_Chi_Minh";
+    
+    // Tài khoản kết nối do Clever Cloud cấp phát
+    private static final String USER = "uke5jn1oesyzbjzx";
+    
+    // BẠN LƯU Ý: Hãy mở trang Clever Cloud, copy mật khẩu thật ở dòng 'Password' rồi dán đè thay thế cho chữ dưới đây nha!
+    private static final String PASSWORD = "EoYGQ2EVGKKnAmFSkkQo";
 
     public static Connection getConnection() throws SQLException {
         try {
